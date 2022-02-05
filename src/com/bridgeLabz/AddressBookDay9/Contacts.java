@@ -30,4 +30,11 @@ class Contacts {
             	"City : "+city+"\n"+"State : "+state+"\n"+"Zip : "+zip+"\n"+
 		        "Phone Number : "+phoneNumber+"\n"+"Email : "+emailID);
 	}
+	public class AddressBookUC1 {
+		public static void main (String []args) {
+			Contacts person1=new Contacts();
+			person1.credientials();
+			person1.printCredientials();
+		}
+	}
 }
