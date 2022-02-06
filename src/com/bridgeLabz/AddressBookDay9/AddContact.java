@@ -80,4 +80,9 @@ public class AddContact {
 				+"\nEmail : " + person.email);
 
 	}
+
+	public Object getFirstName() {
+		// TODO Auto-generated method stub
+		return firstName;
+	}
 }
