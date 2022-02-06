@@ -3,7 +3,7 @@ package com.bridgeLabz.AddressBookDay9;
 import java.util.*;
 
 class Contacts {
-	public  String firstName,lastName,address,city,state,zip,phoneNumber,emailID;
+	public  String firstName,lastName,address,city,state,zipCode,phoneNumber,email;
 	public void credientials() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter First Name=");
@@ -17,18 +17,18 @@ class Contacts {
 		System.out.println("Enter State=");
 		String state=sc.nextLine();
 		System.out.println("Enter zip code=");
-		int zip=sc.nextInt();
+		int zipCode=sc.nextInt();
 		System.out.println("Enter phone number=");
 		int phoneNumber=sc.nextInt();
-		System.out.println("Enter EmailId=");
-		String emailID=sc.nextLine();
+		System.out.println("Enter Email=");
+		String email=sc.nextLine();
 		sc.close();
 		
 	}
 	public void printCredientials() {
 		System.out.print("FirstName : "+firstName+"\n"+"LastName : "+lastName+"\n"+"Address :"+address+"\n"+
-            	"City : "+city+"\n"+"State : "+state+"\n"+"Zip : "+zip+"\n"+
-		        "Phone Number : "+phoneNumber+"\n"+"Email : "+emailID);
+            	"City : "+city+"\n"+"State : "+state+"\n"+"Zip : "+zipCode+"\n"+
+		        "Phone Number : "+phoneNumber+"\n"+"Email : "+email);
 	}
 	public class AddressBookUC1 {
 		public static void main (String []args) {
