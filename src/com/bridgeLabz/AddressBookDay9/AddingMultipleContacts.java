@@ -1,15 +1,12 @@
 package com.bridgeLabz.AddressBookDay9;
 
-import java.util.ArrayList;
-
 import java.util.*;
 
-public class DeleteContact {
+public class AddingMultipleContacts {
 	static ArrayList<AddContact> personsList = new ArrayList<>();
 	static Scanner sc = new Scanner(System.in);
-	static int indexOfPerson = 0;
 	static int counter;
-	
+	static int indexOfPerson = 0;
 
 	public static void AddContact() {	
 		AddContact person = new AddContact();
@@ -46,6 +43,7 @@ public class DeleteContact {
 		System.out.println("New Person added");
 		counter++;
 	}
+	
 	static void editContact() {
 
 		if (counter > 0) {
@@ -91,6 +89,7 @@ public class DeleteContact {
 		} else
 			System.out.println("There is no contacts to edit in AddressBook");
 	}
+	
 	static void deleteContact(){
 		if (counter > 0) {
 			System.out.println("Enter Person's FirstName you want to delete: ");
@@ -104,12 +103,21 @@ public class DeleteContact {
 			}
 		}
 	}
+	static void AddMultipleContacts() {
+		System.out.println("Enter The Number Of Persons Want To Add To The AddressBook");
+		Scanner sc = new Scanner(System.in);
+		int noOfPerson = sc.nextInt();
+		for (int i=1;i<=noOfPerson;i++) {
+			AddContact();
+			sc.close();
+		}
+	}
 	static void choices() {
 
 		int choice;
 		do {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter Choice 1: AddContact \n 2: EditContact \n 3: Display person's Details \n4: Delete \n 0: Exit ");
+			System.out.println("Enter Choice 1: AddContact \n 2: EditContact \n 3: Display person's Details \n4: Delete \n5: Add Multiple Contact \n 0: Exit ");
 			choice = sc.nextInt();
 
 			switch (choice) {
@@ -126,14 +134,15 @@ public class DeleteContact {
 			case 4:
 				deleteContact();
 				break;
-
+			case 5:
+				AddMultipleContacts();
 			default:
-				System.out.println("Enter number from 1 to 4");
+				System.out.println("Enter number from 1 to 5");
 				choice = 5;
 				sc.close();
 			}
 		}
-		while (choice < 5);
+		while (choice < 6);
 	}
 	public static void main(String[] args) {
 		choices();
